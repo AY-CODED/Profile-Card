@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="https://my-portfolio-2-0-rho.vercel.app/assets/my_pic-D8RGjx0m.jpeg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ayomipo Soyinka — Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="profile-card" role="region" aria-label="Profile card for Ayomipo Soyinka" data-testid="profile-card">
+    
+    <header class="profile-header">
+      <div class="avatar" data-testid="avatar">
+        <img 
+          src="https://my-portfolio-2-0-rho.vercel.app/assets/my_pic-D8RGjx0m.jpeg" 
+          alt="Ayomipo Soyinka" 
+          onerror="this.style.display='none'; this.parentNode.textContent='AS';"
+        />
+      </div>
+
+      <h1 class="name" data-testid="full-name">Ayomipo Soyinka</h1>
+      <div class="title" data-testid="role">Software Engineer</div>
+      <div class="meta" data-testid="location">Lagos, Nigeria</div>
+
+      <p class="bio" data-testid="bio">
+        Software engineer focused on building delightful web experiences and robust tools.
+        I work on personal projects and freelance gigs — currently building a local-language
+        learning app and other web apps.
+      </p>
+
+      <!-- Live Timestamp -->
+      <div class="timestamp" data-testid="timestamp">Timestamp: 0s</div>
+    </header>
+
+    <section class="skills-section">
+      <h3>Skills</h3>
+      <div class="badges" aria-label="skills" data-testid="skills"></div>
+    </section>
+
+    <section class="flex-lists">
+      <div class="list-block">
+        <h3>Hobbies</h3>
+        <ul class="list" data-testid="hobbies"></ul>
+      </div>
+
+      <div class="list-block">
+        <h3>Interests</h3>
+        <ul class="list" data-testid="interests"></ul>
+      </div>
+
+      <div class="list-block">
+        <h3>Dislikes</h3>
+        <ul class="list dislikes" data-testid="dislikes"></ul>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="contactBtn" data-testid="contact-btn">Contact</button>
+      <button class="btn btn-ghost" id="copyBtn" data-testid="copy-btn">Copy Email</button>
+      <button class="btn btn-ghost" id="downloadBtn" data-testid="download-btn">Download vCard</button>
+    </div>
+
+    <div class="links">
+      <a class="link" href="https://github.com/AY-CODED" target="_blank" rel="noopener" data-testid="github">GitHub</a>
+      <a class="link" href="https://www.linkedin.com/in/ayomipo-soyinka-208156335/" target="_blank" rel="noopener" data-testid="linkedin">LinkedIn</a>
+      <a class="link" href="https://my-portfolio-2-0-rho.vercel.app/" target="_blank" rel="noopener" data-testid="website">Portfolio</a>
+    </div>
+
+    <div class="stats" aria-label="quick stats">
+      <div class="stat" data-testid="projects">
+        <span class="value">20</span>
+        <span class="label">Projects</span>
+      </div>
+      <div class="stat" data-testid="experience">
+        <span class="value">1y</span>
+        <span class="label">Experience</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
