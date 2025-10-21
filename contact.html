@@ -12,45 +12,105 @@
       <div class="nav-container">
         <ul class="nav-links">
           <li><a href="index.html" data-testid="nav-home">Home</a></li>
-          <li><a href="contact.html" class="active" data-testid="nav-contact">Contact</a></li>
+          <li>
+            <a href="contact.html" class="active" data-testid="nav-contact"
+              >Contact</a
+            >
+          </li>
           <li><a href="about.html" data-testid="nav-about">About</a></li>
         </ul>
       </div>
     </nav>
 
-    <main role="main" aria-label="Contact Ayomipo Soyinka" data-testid="main-content">
+    <main
+      role="main"
+      aria-label="Contact Ayomipo Soyinka"
+      data-testid="main-content"
+    >
       <section class="contact-page" data-testid="contact-page">
         <div class="contact-intro">
           <h1>Contact Me</h1>
           <p>
-            Have a project idea, collaboration, or just want to say hello?
-            Fill out the form below — I’d love to hear from you.
+            Have a project idea, collaboration, or just want to say hello? Fill
+            out the form below — I’d love to hear from you.
           </p>
         </div>
 
-        <form class="contact-form" data-testid="contact-form" onsubmit="handleSubmit(event)">
+        <form
+          class="contact-form"
+          data-testid="contact-form"
+          onsubmit="handleSubmit(event)"
+          action="https://formspree.io/f/mqayojgj"
+          method="POST"
+        >
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required data-testid="contact-name" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+              data-testid="contact-name"
+            />
           </div>
 
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required data-testid="contact-email" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              data-testid="contact-email"
+            />
           </div>
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required data-testid="contact-message"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message here..."
+              required
+              data-testid="contact-message"
+            ></textarea>
           </div>
 
-          <button type="submit" class="btn-primary" data-testid="contact-submit">Send Message</button>
+          <button
+            type="submit"
+            class="btn-primary"
+            data-testid="contact-submit"
+          >
+            Send Message
+          </button>
         </form>
 
         <div class="contact-links">
-          <a href="mailto:ayomiposoyinka@gmail.com" class="link" data-testid="contact-email-link">📧 Email</a>
-          <a href="https://github.com/AY-CODED" target="_blank" rel="noopener" class="link" data-testid="contact-github">💻 GitHub</a>
-          <a href="https://www.linkedin.com/in/ayomipo-soyinka-208156335/" target="_blank" rel="noopener" class="link" data-testid="contact-linkedin">🔗 LinkedIn</a>
+          <a
+            href="mailto:ayomiposoyinka@gmail.com"
+            class="link"
+            data-testid="contact-email-link"
+            >📧 Email</a
+          >
+          <a
+            href="https://github.com/AY-CODED"
+            target="_blank"
+            rel="noopener"
+            class="link"
+            data-testid="contact-github"
+            >💻 GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ayomipo-soyinka-208156335/"
+            target="_blank"
+            rel="noopener"
+            class="link"
+            data-testid="contact-linkedin"
+            >🔗 LinkedIn</a
+          >
         </div>
       </section>
     </main>
@@ -58,7 +118,11 @@
     <script>
       function handleSubmit(e) {
         e.preventDefault();
-        alert("Thanks for reaching out, " + document.getElementById("name").value + "! Your message has been sent.");
+        alert(
+          "Thanks for reaching out, " +
+            document.getElementById("name").value +
+            "! Your message has been sent."
+        );
         e.target.reset();
       }
     </script>
