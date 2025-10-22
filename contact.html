@@ -1,130 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="./images/myImg.png" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/myImg.png" type="image/x-icon">
     <title>Contact — Ayomipo Soyinka</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="nav-container">
-        <ul class="nav-links">
-          <li><a href="index.html" data-testid="nav-home">Home</a></li>
-          <li>
-            <a href="contact.html" class="active" data-testid="nav-contact"
-              >Contact</a
-            >
-          </li>
-          <li><a href="about.html" data-testid="nav-about">About</a></li>
-        </ul>
-      </div>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a class='nav-link' href='index.html'>Profile</a>
+            <a class='nav-link active' href='contact.html'>Contact</a>
+            <a class='nav-link' href='about.html'>About</a>
+        </div>
     </nav>
 
-    <main
-      role="main"
-      aria-label="Contact Ayomipo Soyinka"
-      data-testid="main-content"
-    >
-      <section class="contact-page" data-testid="contact-page">
-        <div class="contact-intro">
-          <h1>Contact Me</h1>
-          <p>
-            Have a project idea, collaboration, or just want to say hello? Fill
-            out the form below — I’d love to hear from you.
-          </p>
+    <article class="page-card">
+        <div class="card-content">
+            <header class="page-header">
+                <h1>Get in Touch</h1>
+                <p class="page-subtitle">Have a project idea, collaboration, or just want to say hello? Drop me a message.</p>
+            </header>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        data-testid="test-contact-name"
+                        aria-describedby="nameError"
+                        placeholder="Ayomipo Soyinka"
+                        required
+                    >
+                    <span
+                        class="error-message"
+                        id="nameError"
+                        data-testid="test-contact-error-name"
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        data-testid="test-contact-email"
+                        aria-describedby="emailError"
+                        placeholder="you@example.com"
+                        required
+                    >
+                    <span
+                        class="error-message"
+                        id="emailError"
+                        data-testid="test-contact-error-email"
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        data-testid="test-contact-subject"
+                        aria-describedby="subjectError"
+                        placeholder="I'm interested in..."
+                        required
+                    >
+                    <span
+                        class="error-message"
+                        id="subjectError"
+                        data-testid="test-contact-error-subject"
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        data-testid="test-contact-message"
+                        aria-describedby="messageError"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+                    <span
+                        class="error-message"
+                        id="messageError"
+                        data-testid="test-contact-error-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                    data-testid="test-contact-submit"
+                >
+                    Send Message
+                </button>
+
+                <div
+                    class="success-message"
+                    id="successMessage"
+                    data-testid="test-contact-success"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+            </form>
         </div>
+    </article>
 
-        <form
-          class="contact-form"
-          data-testid="contact-form"
-          onsubmit="handleSubmit(event)"
-          action="https://formspree.io/f/xzzjlzvn"
-          method="POST"
-        >
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your name"
-              required
-              data-testid="contact-name"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-              data-testid="contact-email"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Write your message here..."
-              required
-              data-testid="contact-message"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="btn-primary"
-            data-testid="contact-submit"
-          >
-            Send Message
-          </button>
-        </form>
-
-        <div class="contact-links">
-          <a
-            href="mailto:ayomiposoyinka@gmail.com"
-            class="link"
-            data-testid="contact-email-link"
-            >📧 Email</a
-          >
-          <a
-            href="https://github.com/AY-CODED"
-            target="_blank"
-            rel="noopener"
-            class="link"
-            data-testid="contact-github"
-            >💻 GitHub</a
-          >
-          <a
-            href="https://www.linkedin.com/in/ayomipo-soyinka-208156335/"
-            target="_blank"
-            rel="noopener"
-            class="link"
-            data-testid="contact-linkedin"
-            >🔗 LinkedIn</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <script>
-      function handleSubmit(e) {
-        e.preventDefault();
-        alert(
-          "Thanks for reaching out, " +
-            document.getElementById("name").value +
-            "! Your message has been sent."
-        );
-        e.target.reset();
-      }
-    </script>
-  </body>
+    <script src="contact.js"></script>
+</body>
 </html>
